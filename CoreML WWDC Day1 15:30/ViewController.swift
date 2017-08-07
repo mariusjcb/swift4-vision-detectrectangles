@@ -13,21 +13,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: Properties
     
-    var image: UIImage? {
+    var image: CIImage? {
         didSet {
             updateUI()
             
-            if image != nil {
-                inputImage = CIImage(image: image!)
-            } else {
-                inputImage = nil
+            guard image != nil else {
+                return
             }
-        }
-    }
-    
-    private var inputImage: CIImage? {
-        didSet {
-            inputImage?.oriented(.downMirrored)
+            
+            image!.oriented(.downMirrored)
             analyseImage()
         }
     }
@@ -59,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     private func analyseImage() {
-        guard inputImage != nil else {
+        guard image != nil else {
             print("No input image")
             return
         }
@@ -71,7 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         rectanglesRequest.maximumObservations = 100
         
         let requestHandler = VNImageRequestHandler(
-            ciImage: inputImage!,
+            ciImage: image!,
             orientation: CGImagePropertyOrientation.downMirrored
         )
         
@@ -86,7 +80,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     private func updateUI() {
         targetImageView?.layer.sublayers = [CALayer]()
-        targetImageView?.image = image
+        
+        if image != nil {
+            targetImageView?.image = UIImage(ciImage: image!)
+        }
     }
     
     //MARK: Vision Methods
@@ -142,7 +139,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return
         }
         
-        image = selectedImage
+        image = CIImage(image: selectedImage)
         picker.dismiss(animated: true)
     }
 }
