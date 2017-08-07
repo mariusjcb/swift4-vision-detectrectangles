@@ -12,6 +12,8 @@
 		FB55BFF21F37BA0200069F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55BFF01F37BA0200069F7B /* Main.storyboard */; };
 		FB55BFF41F37BA0200069F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB55BFF31F37BA0200069F7B /* Assets.xcassets */; };
 		FB55BFF71F37BA0200069F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55BFF51F37BA0200069F7B /* LaunchScreen.storyboard */; };
+		FB55C0011F37D19800069F7B /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55C0001F37D19800069F7B /* CGPoint.swift */; };
+		FB55C0031F37D1B000069F7B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55C0021F37D1B000069F7B /* CGRect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FB55BFF31F37BA0200069F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB55BFF61F37BA0200069F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB55BFF81F37BA0200069F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB55C0001F37D19800069F7B /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		FB55C0021F37D1B000069F7B /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		FB55BFEB1F37BA0200069F7B /* CoreML WWDC Day1 15:30 */ = {
 			isa = PBXGroup;
 			children = (
-				FB55BFEC1F37BA0200069F7B /* AppDelegate.swift */,
+				FB55BFFF1F37D18400069F7B /* Extensions */,
 				FB55BFEE1F37BA0200069F7B /* ViewController.swift */,
 				FB55BFF01F37BA0200069F7B /* Main.storyboard */,
+				FB55BFFE1F37BA0B00069F7B /* Supporting Files */,
+			);
+			path = "CoreML WWDC Day1 15:30";
+			sourceTree = "<group>";
+		};
+		FB55BFFE1F37BA0B00069F7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB55BFEC1F37BA0200069F7B /* AppDelegate.swift */,
 				FB55BFF31F37BA0200069F7B /* Assets.xcassets */,
 				FB55BFF51F37BA0200069F7B /* LaunchScreen.storyboard */,
 				FB55BFF81F37BA0200069F7B /* Info.plist */,
 			);
-			path = "CoreML WWDC Day1 15:30";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB55BFFF1F37D18400069F7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB55C0001F37D19800069F7B /* CGPoint.swift */,
+				FB55C0021F37D1B000069F7B /* CGRect.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB55BFEF1F37BA0200069F7B /* ViewController.swift in Sources */,
+				FB55C0011F37D19800069F7B /* CGPoint.swift in Sources */,
 				FB55BFED1F37BA0200069F7B /* AppDelegate.swift in Sources */,
+				FB55C0031F37D1B000069F7B /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
-				INFOPLIST_FILE = "CoreML WWDC Day1 15:30/Info.plist";
+				INFOPLIST_FILE = "CoreML WWDC Day1 15:30/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ro.iliemarius.CoreML-WWDC-Day1-15-30";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
-				INFOPLIST_FILE = "CoreML WWDC Day1 15:30/Info.plist";
+				INFOPLIST_FILE = "CoreML WWDC Day1 15:30/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ro.iliemarius.CoreML-WWDC-Day1-15-30";
 				PRODUCT_NAME = "$(TARGET_NAME)";
